@@ -38,7 +38,7 @@ A **K-mer** is a substring of length K in a string of DNA bases. For example: Al
 |4|27|1.8e+16|
 |4|31|4.6e+18|
 
-As you can see, there are 64 possibilities for a 3-mer and over 4 Trillion possibilities for a 21-mer!
+As you can see, there are 64 possibilities for a 3-mer and over 4 trillion possibilities for a 21-mer!
 
 For a given sequence of length L,  and a K-mer size of K, the total k-mer’s possible will be given by ( L – k ) + 1
 
@@ -52,7 +52,7 @@ e.g. For the sequence of length of 14 , and a K-mer length of 8, the number of K
 
 **GATCCTAC,     ATCCTACT,     TCCTACTG,     CCTACTGA,     CTACTGAT,     TACTGATG,     ACTGATGC**
 
-For shorter fragments, as in the above example, the total number of K-mers estimated is n = 7, which it is not close to actual fragment size of L which is 14 bps.  But for larger fragments , the total number of K-mer’s (n) provide a good approximation to the actual genome size. The following table tries to illustrate the approximation:
+For shorter fragments, as in the above example, the total number of K-mers estimated is n = 7, which it is not close to actual fragment size of L which is 14 bps.  But for larger fragments, the total number of K-mer’s (n) provide a good approximation to the actual genome size. The following table tries to illustrate the approximation:
 
 K=18		
 
@@ -65,7 +65,7 @@ K=18
 |100000|99983|0.017|
 |1000000|999983|0.0017
 
-So for a genome size of 1 Mb and K-mer size of 18, the error between estimation and reality is only .0017%. Which is a very good approximation of actual size.
+So for a genome size of 1 Mb and K-mer size of 18, the error between estimation and reality is only .0017%, which is a very good approximation of actual size.
 
 In choosing a K-mer size, it should be large enough to allow the K-mer to map uniquely to the genome. So the total available K-mers should be sufficiently larger than the genome size and therefor has the ability to store all the K-mers in the genome (a K-mer size of 21 is large enough for most genomes). However, too large K-mers leads to need for substantial computational resources, as well as producing more erroneous K-mers caused by sequencing errors. In other words, the higher error rate in the sequencing data, the smaller k-mer size should be used.  Extremely large (haploid size >>10GB) and/or very repetitive genomes may benefit from larger kmer lengths to increase the number of unique k-mers.
 
@@ -86,7 +86,7 @@ To get the fragement size (ala genome size), we simply need to divide the total 
 
     L   = n / C
         = 9999700 / 10
-        = 9999700
+        = 999970
 
 The above example helps to understand that we never sequence a single copy of genome but rather a population. Rather we end up sequencing C copies of genome. This is also referred as coverage in sequencing. To obtain actual genome size (N), divide the total K-mers seen (n) by coverage (C).
 
